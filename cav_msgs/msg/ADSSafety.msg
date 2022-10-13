@@ -7,42 +7,44 @@
 #
 # 
 
-string vin_number
-string license_plate
-string carrier_name
-#USDOT number
-string carrier_id
-string veh_insurance_status
-string operator_name
-string operator_contact_info
+# standard header for all mobility messages
+cav_msgs/MobilityHeader  m_header
 
+# message type
+string type
+
+string pre_trip_inspector
+string inspector_id
+string vehicle
+string vin
+string license_plate
+string state
+string carrier_name
+string carrier_id
+uint16 usdot_number
 float32 gross_axle_weight
 float32 gross_veh_weight
-
+string overweight_permit_status
+string date_of_last_inspection
 string date_of_pre_trip_inspection_tractor
 string date_of_pre_trip_inspection_trailer
+uint16 iss_score
+string ifta_status
+string irp_status
+string truck_operational_health
+string tractor_operational_health
+string trailer_operational_health
+string level_of_inspection
+string origin
+string destination
+string nearest_roadside_inspection_facility
+j2735_v2x_msgs/Position3D destination_point
+string preclearance_system
 
-j2735_v2x_msgs/FullPositionVector current_position
+# valid operational time
+operational_time: 8-16
 
 cav_msgs/ADSStatus ads_status
+j2735_v2x_msgs/FullPositionVector current_position
 
-cav_msgs/TPMS tpms_data
-
-#1: green-healthy-100%
-#0: yellow/red-unhealthy-anything below 100%
-bool truck_operational_status
-
-#1: light on
-#0: light off
-bool abs_warning
-
-string destination
-j2735_v2x_msgs/Position3D destination_point
-string roadside_inspection_facility
-uint16 level_of_inspection
-
-
-
-
-
-
+cav_msgs/TirePressureMonitoringSystem tpms_data
