@@ -45,7 +45,7 @@ float64 latitude
 float64 longitude
 
 # valid operational time
-string operational_time: 8-16
+string operational_time
 
 cav_msgs/ADSStatus ads_status
 cav_msgs/TirePressureMonitoringSystem tpms_data
