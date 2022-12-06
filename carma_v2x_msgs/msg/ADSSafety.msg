@@ -8,7 +8,7 @@
 # 
 
 # standard header for all mobility messages
-cav_msgs/MobilityHeader  m_header
+carma_v2x_msgs/MobilityHeader  m_header
 
 # message type
 string type
